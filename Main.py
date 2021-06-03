@@ -1,3 +1,7 @@
+from os import system
+
+system('pip install requests')
+
 from requests import get
 import json
 import time
