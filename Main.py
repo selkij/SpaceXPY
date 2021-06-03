@@ -31,7 +31,7 @@ def loadDumpRocketsData():
     dumpRocketsData()
     data = loadRocketsData()
 
-    fstr = 'Voici les informations sur les fusées:\n\n'
+    fstr = 'Rockets informations:\n\n'
     for x in data:
         fstr += '\n'.format(x, x['land_landings'] + x['water_landings'])
     
@@ -43,9 +43,9 @@ def loadDumpCapsulesData():
     dumpCapsulesData()
     data = loadCapsulesData()
 
-    fstr = 'Voici les informations sur les capsules:\n\n'
+    fstr = 'Capsules informations:\n\n'
     for x in data:
-        fstr += '{0[serial]}: ré-utilisée {0[reuse_count]} fois, est attérie sur l\'eau {0[water_landings]} fois, est attérie sur terre {0[land_landings]} fois, est attérie  {1} fois au total, status : {0[status]}, type de capsule : {0[type]}, identifiant : {0[id]}\n'.format(x, x['land_landings'] + x['water_landings'])
+        fstr += '{0[serial]}: reused {0[reuse_count]} times, landed on water {0[water_landings]} times, landed on land {0[land_landings]} times, landed  {1} times in total, status : {0[status]}, type of capsule : {0[type]}, id : {0[id]}\n'.format(x, x['land_landings'] + x['water_landings'])
     
 
     print(fstr)
@@ -65,8 +65,8 @@ def loadDumpCompanyData():
     dumpCompanyData()
     data = loadCompanyData()
 
-    fstr = 'Voici les informations sur la compagnie SpaceX:\n\n'
-    fstr += 'Nom de la compagnie: {0[name]}\n Fondateur de SpaceX: {0[founder]}\n Créé en: {0[founded]}\n CEO: {0[ceo]}\n CTO: {0[cto]}\n COO: {0[coo]}\n Propulsion du CTO: {0[cto_propulsion]}\n Nombre d\'employés dans SpaceX: {0[employees]}\n Valeur de SpaceX: {0[valuation]} Nombre de voitures: {0[vehicles]}\n Nombre de sites de lancement: {0[launch_sites]}\n Nombre de sites de test: {0[test_sites]}\n Description de SpaceX: SpaceX conçoit, fabrique et lance des fusées et des engins spatiaux avancés. La société a été fondée en 2002 pour révolutionner la technologie spatiale, dans le but ultime de permettre aux gens de vivre sur d\'autres planètes.'.format(data)
+    fstr = 'SpaceX informations:\n\n'
+    fstr += 'Company name: {0[name]}\n SpaceX founder: {0[founder]}\n Founded in: {0[founded]}\n CEO: {0[ceo]}\n CTO: {0[cto]}\n COO: {0[coo]}\n Propulsion of CTO: {0[cto_propulsion]}\n Number of employees in SpaceX: {0[employees]}\n Value of SpaceX: {0[valuation]}\n Number of vehicles: {0[vehicles]}\n Number of launch sites: {0[launch_sites]}\n Number of test sites: {0[test_sites]}\n Description of SpaceX: {0[summary]}'.format(data)
     
 
     print(fstr)
@@ -78,17 +78,17 @@ def loadDumpCompanyData():
 print("Powered by SpaceX api https://github.com/r-spacex/SpaceX-API\n")
 
 while True:
-    print("Quelles informations voulez vous?")
+    print("What information do you want?")
     print("1) Capsules")
-    print("2) Fusées")
-    print("3) Informations sur SpaceX")
+    print("2) Rockets")
+    print("3) Informations of SpaceX")
     inp = input("> ")
 
     if inp == "1":
         
         while True:
             loadDumpCapsulesData()
-            inpexit = input("> Quitter? (y/n)")
+            inpexit = input("> Quit? (y/n)")
             if inpexit == "y":
                 break
         
@@ -98,6 +98,6 @@ while True:
     if inp == "3":
         while True:
             loadDumpCompanyData()
-            inpexit = input("> Quitter? (y/n)")
+            inpexit = input("> Quit? (y/n)")
             if inpexit == "y":
                 break
