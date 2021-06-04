@@ -32,10 +32,11 @@ def loadDumpRocketsData():
     data = loadRocketsData()
 
     fstr = 'Rockets informations:\n\n'
-    for x in data:
-        fstr += '\n'.format(x, x['land_landings'] + x['water_landings'])
+    for d in data:
+        launcher = d
+        h = launcher['height']['meters']
+        fstr += 'meters: \n\n' + str(h) + '\n'
     
-
     print(fstr)
 
 
@@ -76,9 +77,11 @@ def loadDumpCompanyData():
 
 
 print("Powered by SpaceX api https://github.com/r-spacex/SpaceX-API\n")
-
+t = loadRocketsData()
+print(type(t[0]))
 while True:
-    print("What information do you want?")
+    
+    print("What informations do you want?")
     print("1) Capsules")
     print("2) Rockets")
     print("3) Informations of SpaceX")
@@ -93,7 +96,11 @@ while True:
                 break
         
     if inp == "2":
-        pass
+        while True:
+            loadDumpRocketsData()
+            inpexit = input("> Quit? (y/n)")
+            if inpexit == "y":
+                break
 
     if inp == "3":
         while True:
@@ -101,3 +108,5 @@ while True:
             inpexit = input("> Quit? (y/n)")
             if inpexit == "y":
                 break
+
+
