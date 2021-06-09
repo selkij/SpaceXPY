@@ -1,3 +1,5 @@
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+
 # SpaceXPY
 Seeking for informtions about SpaceX? well SpaceXPY is here to show you all informations about capsules, rockets, about SpaceX...
 
