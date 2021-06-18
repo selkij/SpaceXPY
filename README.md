@@ -1,4 +1,4 @@
-<img src="https://badgen.net/badge/%20/Python/yellow?icon=pypi" /> <img src="https://img.shields.io/github/issues/Kiirx/SpaceXPY.svg" /> <img src="https://img.shields.io/github/issues-closed/Kiirx/SpaceXPY.svg"/> <img src="https://img.shields.io/github/issues-pr/Kiirx/SpaceXPY.svg" /> <img src="https://img.shields.io/github/license/Kiirx/SpaceXPY.svg" />
+<img src="https://badgen.net/badge/%20/Python/yellow?icon=pypi" /> [![CI](https://github.com/Kiirx/SpaceXPY/actions/workflows/main.yml/badge.svg)](https://github.com/Kiirx/SpaceXPY/actions/workflows/main.yml) <img src="https://img.shields.io/github/issues/Kiirx/SpaceXPY.svg" /> <img src="https://img.shields.io/github/issues-closed/Kiirx/SpaceXPY.svg"/> <img src="https://img.shields.io/github/issues-pr/Kiirx/SpaceXPY.svg" /> <img src="https://img.shields.io/github/license/Kiirx/SpaceXPY.svg" />
 
 ![Logo-Image](https://github.com/Kiirx/SpaceXPY/blob/main/images/SpaceXPYlogo.png)
 
